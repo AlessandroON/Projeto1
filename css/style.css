@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: white;
+
+    margin: 0;
+    font-family: "Sour Gummy", sans-serif;
+}
+
+.navbar {
+    display: flex;
+    flex-flow: row wrap;
+    height: 100px;
+    background: white;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+}
+
+.logo {
+    flex: 20%;
+    /*border: 1px solid red;*/
+    text-align: left;
+    margin-left: 10%;
+
+}
+
+.logo h1 {
+    font-size: 36px;
+    font-family: "Lobster", cursive;
+    color: rgba(36, 75, 121);
+}
+
+.menu {
+    /*border: 1px solid yellow;*/
+    flex: 70%;
+    text-align: right;
+    padding: 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: rgba(36, 75, 121);
+    font-size: 18px;
+    padding: 20px;
+}
+
+.menu a:hover {
+    color: rgba(65, 105, 63);
+    border-top: 5px solid rgba(65, 105, 63);
+}
+
+#botao {
+    background: rgba(36, 75, 121);
+    color: white;
+    padding: 10px;
+}
+
+#botao:hover {
+    border: none;
+    color: rgba(36, 75, 121);
+    background: rgba(65, 105, 63);
+
+}
+
+.header {
+    display: flex;
+    flex-flow: wrap row;
+    height: auto;
+    background: white;
+    justify-content: center;
+    align-items: center;
+    padding-top: 120px;
+}
+
+.headline {
+    flex: 40%;
+    margin-left: 10%;
+    /* border: 2px solid black; */
+}
+
+.headline h2 {
+    font-weight: 900;
+    font-size: 40px;
+    color: rgba(36, 75, 121);
+    padding: 0;
+    margin: 0;
+
+}
+
+.headline p {
+    color: black;
+    text-align: left;
+}
+
+.vermais {
+    display: inline-block;
+    text-decoration: none;
+    padding: 20px 50px;
+    background: rgba(65, 105, 63);
+    color: white;
+    text-transform: uppercase;
+    border-radius: 5px;
+
+}
+
+.vermais:hover {
+    text-decoration: dashed;
+    background: rgba(36, 75, 121);
+    color: White;
+    border: 3px solid rgba(65, 105, 63);
+}
+
+.imgheadline {
+    margin-right: 10%;
+    flex: 40%;
+    /* border: 2px solid rgb(208, 15, 15); */
+    text-align: center;
+
+}
+
+section {
+    display: inline-block;
+    margin-top: 80px;
+    /* border: 2px solid red; */
+    margin-left: 2%;
+    margin-right: 2%;
+    padding: 5%;
+    width: 96%;
+    text-align: center;
+}
+
+section h2 {
+    width: 100%;
+    font-size: 60px;
+    margin: 0;
+    font-family: "Lobster", cursive;
+    font-weight: bold;
+    color: rgba(36, 75, 121);
+}
+
+.cards {
+    margin-top: 5%;
+    display: inline-block;
+
+}
+
+.card {
+    display: inline-block;
+    width: 30%;
+    padding: 30px;
+    margin: 1%;
+    border: 3px solid rgba(65, 105, 63);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.card img {
+    height: 25%;
+    width: 25%;
+    align-items: center;
+
+}
+
+.text2 {
+    display: none;
+}
+
+.card:hover {
+    background: rgba(65, 105, 63);
+    color: white;
+}
+
+.card:hover .text1 {
+    display: none;
+}
+
+.card:hover .text2 {
+    display: block;
+}
+
+footer {
+    margin-top: 100px;
+    height: 300px;
+    background-image: linear-gradient(180deg, rgba(36, 75, 121), black);
+    text-align: center;
+    border-top: 5px solid rgba(65, 105, 63);
+    color: white;
+}
+
+.logofooter {
+    padding: 50px;
+}
+
+.logofooter h1 {
+    font-size: 40px;
+    font-family: "Lobster", cursive;
+
+}
+
+.fixo {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.fixo p {
+    margin: 0;
+    color: rgba(41, 167, 26);
+}
+
+#whats {
+    height: 50px;
+    width: 50px;
+}
