@@ -118,6 +118,7 @@ body {
 }
 
 .imgheadline {
+    display: none;
     margin-right: 10%;
     flex: 40%;
     /* border: 2px solid rgb(208, 15, 15); */
@@ -151,6 +152,13 @@ section h2 {
 
 }
 
+.card img {
+    height: 25%;
+    width: 25%;
+    align-items: center;
+
+}
+
 .card {
     display: inline-block;
     width: 30%;
@@ -159,29 +167,28 @@ section h2 {
     border: 3px solid rgba(65, 105, 63);
     border-radius: 10px;
     cursor: pointer;
+    transition: 0.5s ease;
 }
 
-.card img {
-    height: 25%;
-    width: 25%;
-    align-items: center;
-
+.card:hover {
+    transform: scale(1.02);
 }
 
 .text2 {
     display: none;
 }
 
-.card:hover {
+.card.ativo {
     background: rgba(65, 105, 63);
     color: white;
+    transform: scale(1.03);
 }
 
-.card:hover .text1 {
+.card.ativo .text1 {
     display: none;
 }
 
-.card:hover .text2 {
+.card.ativo .text2 {
     display: block;
 }
 
