@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+.paginaAtual {
+    border-top: 2px solid rgba(36, 75, 121);
+}
+
+
 body {
     background: white;
 
@@ -50,6 +55,11 @@ body {
     font-size: 18px;
     padding: 20px;
 }
+
+.paginaAtual {
+    border-top: 2px solid rgba(36, 75, 121);
+}
+
 
 .menu a:hover {
     color: rgba(65, 105, 63);
