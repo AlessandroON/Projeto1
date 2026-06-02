@@ -112,6 +112,8 @@ body {
 #vermais {
     display: inline-block;
     text-decoration: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
     padding: 20px 70px;
     background: rgba(65, 105, 63);
     color: white;
@@ -209,7 +211,7 @@ section h2 {
 footer {
     margin-top: 100px;
     height: 300px;
-    background-image: linear-gradient(180deg, rgba(36, 75, 121), black);
+    background-image: linear-gradient(180deg, rgba(36, 75, 121),rgba(36, 75, 121),rgba(65, 105, 63));
     text-align: center;
     border-top: 5px solid rgba(65, 105, 63);
     color: white;
