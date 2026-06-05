@@ -11,7 +11,7 @@
 
 
 body {
-    background: white;
+    background: rgb(255, 255, 255);
 
     margin: 0;
     font-family: "Sour Gummy", sans-serif;
@@ -21,7 +21,7 @@ body {
     display: flex;
     flex-flow: row wrap;
     height: 100px;
-    background: white;
+    background: rgb(255, 255, 255);
     justify-content: center;
     align-items: center;
     position: fixed;
@@ -54,10 +54,6 @@ body {
     color: rgba(36, 75, 121);
     font-size: 18px;
     padding: 20px;
-}
-
-.paginaAtual {
-    border-top: 2px solid rgba(36, 75, 121);
 }
 
 
@@ -178,7 +174,7 @@ section h2 {
     width: 30%;
     padding: 30px;
     margin: 1%;
-    border: 3px solid rgba(65, 105, 63);
+    border: 3px solid rgba(36, 75, 121);
     border-radius: 10px;
     cursor: pointer;
     transition: 0.5s ease;
@@ -186,6 +182,8 @@ section h2 {
 
 .card:hover {
     transform: scale(1.02);
+    border: 3px solid rgba(65, 105, 63);
+
 }
 
 .text2 {
@@ -196,6 +194,7 @@ section h2 {
     background: rgba(65, 105, 63);
     color: white;
     transform: scale(1.03);
+    border: 3px solid rgba(36, 75, 121);
 }
 
 .card.ativo .text1 {
