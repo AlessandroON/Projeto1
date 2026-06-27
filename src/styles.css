@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --blue: rgb(36, 75, 121);
+  --green: rgb(65, 105, 63);
+  --ink: rgb(24, 33, 44);
+  --muted: rgb(86, 96, 109);
+  --line: rgb(222, 229, 236);
+  --surface: rgb(247, 250, 248);
+  --white: rgb(255, 255, 255);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--ink);
+  font-family: 'Sour Gummy', Arial, sans-serif;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(10px);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 96px;
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.brand {
+  border: 0;
+  background: transparent;
+  color: var(--blue);
+  font-family: 'Lobster', cursive;
+  font-size: 36px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.nav-link,
+.join-button {
+  min-height: 44px;
+  border: 0;
+  background: transparent;
+  color: var(--blue);
+  padding: 10px 14px;
+  border-top: 3px solid transparent;
+  border-radius: 0;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--green);
+  border-top-color: var(--green);
+}
+
+.join-button {
+  margin-left: 8px;
+  background: var(--blue);
+  color: var(--white);
+  border-radius: 6px;
+}
+
+.join-button:hover {
+  background: var(--green);
+}
+
+main {
+  min-height: 60vh;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
+  align-items: center;
+  gap: 48px;
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 64px 0 72px;
+}
+
+.hero-copy {
+  max-width: 640px;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: var(--green);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+h1,
+h2,
+h3,
+p {
+  overflow-wrap: anywhere;
+}
+
+.hero h1,
+.technology-page h1 {
+  margin: 0;
+  color: var(--blue);
+  font-size: clamp(42px, 7vw, 68px);
+  line-height: 1.02;
+}
+
+.hero p {
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.primary-button {
+  min-height: 56px;
+  margin-top: 12px;
+  border: 3px solid transparent;
+  border-radius: 6px;
+  background: var(--green);
+  color: var(--white);
+  padding: 14px 42px;
+  text-transform: uppercase;
+}
+
+.primary-button:hover {
+  background: var(--blue);
+  border-color: var(--green);
+}
+
+.hero-media {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-media img {
+  width: min(100%, 460px);
+  height: auto;
+  display: block;
+}
+
+.work-section,
+.technology-page {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 54px 0 72px;
+}
+
+.section-heading {
+  max-width: 760px;
+  margin-bottom: 32px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  color: var(--blue);
+  font-family: 'Lobster', cursive;
+  font-size: clamp(36px, 6vw, 58px);
+  line-height: 1.05;
+}
+
+.cards,
+.technology-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.card,
+.technology-grid article {
+  min-height: 320px;
+  border: 3px solid var(--blue);
+  border-radius: 8px;
+  background: var(--white);
+  color: var(--ink);
+  padding: 28px;
+  text-align: center;
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.card {
+  width: 100%;
+}
+
+.card:hover {
+  border-color: var(--green);
+  transform: translateY(-3px);
+}
+
+.card.active {
+  background: var(--green);
+  border-color: var(--blue);
+  color: var(--white);
+  transform: translateY(-3px);
+}
+
+.card img {
+  width: 88px;
+  height: 88px;
+  object-fit: contain;
+}
+
+.card h3,
+.technology-grid h2 {
+  margin: 18px 0 12px;
+  color: inherit;
+  font-size: 24px;
+}
+
+.card p,
+.technology-grid p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.technology-page {
+  padding-top: 78px;
+}
+
+.technology-grid article {
+  min-height: 240px;
+  text-align: left;
+  background: var(--surface);
+}
+
+.footer {
+  display: grid;
+  place-items: center;
+  gap: 12px;
+  min-height: 280px;
+  margin-top: 56px;
+  border-top: 5px solid var(--green);
+  background: linear-gradient(180deg, var(--blue), var(--blue), var(--green));
+  color: var(--white);
+  text-align: center;
+}
+
+.footer h2 {
+  margin: 0 0 8px;
+  font-family: 'Lobster', cursive;
+  font-size: 42px;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.contact-button {
+  position: fixed;
+  right: 16px;
+  bottom: 14px;
+  display: grid;
+  justify-items: center;
+  gap: 2px;
+  color: rgb(41, 167, 26);
+  text-decoration: none;
+}
+
+.contact-button img {
+  width: 54px;
+  height: 54px;
+}
+
+.contact-button span {
+  padding: 2px 6px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 6px;
+}
+
+@media (max-width: 1239px) {
+  .navbar {
+    min-height: auto;
+    padding: 22px 0;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .brand {
+    text-align: center;
+  }
+
+  .menu {
+    justify-content: center;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 38px;
+    text-align: center;
+  }
+
+  .hero-copy {
+    max-width: none;
+  }
+
+  .cards,
+  .technology-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .technology-grid article {
+    text-align: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .navbar,
+  .hero,
+  .work-section,
+  .technology-page {
+    width: min(100% - 28px, 1180px);
+  }
+
+  .menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .nav-link,
+  .join-button {
+    width: 100%;
+    margin-left: 0;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+  }
+
+  .hero h1,
+  .technology-page h1 {
+    font-size: 40px;
+  }
+
+  .primary-button {
+    width: 100%;
+  }
+}
