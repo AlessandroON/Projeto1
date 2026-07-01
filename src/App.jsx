@@ -175,10 +175,10 @@ const teamMembers = [
 
 const allProducts = productCategories.flatMap((category) =>
   category.products.map((product) => ({
-      ...product,
-      image: product.images[0],
-      categoryId: category.id,
-    })),
+    ...product,
+    image: product.images[0],
+    categoryId: category.id,
+  })),
 );
 
 function getInitialPage() {
@@ -677,7 +677,7 @@ function ProductsPage() {
 
       <div className="product-grid">
         {activeCategory.products.map((product) => (
-          <article className="product-card" key={product.name}>
+          <article className="product-card" key={product.id}>
             <img
               src={product.images[0]}
               alt={`Imagem exemplo de ${product.name}`}
@@ -703,10 +703,17 @@ function ProductsPage() {
 }
 
 function Navbar({ activePage, onNavigate }) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleNavigation = (page) => {
+    onNavigate(page);
+    setIsMenuOpen(false);
+  };
+
   return (
     <header className="site-header">
       <nav className="navbar" aria-label="Navegacao principal">
-        <a className="brand" href="#home" onClick={() => onNavigate('home')}>
+        <a className="brand" href="#home" onClick={() => handleNavigation('home')}>
           <img
             className="brand-logo"
             src="/assets/img/Gemini_Generated_Image_hq2vidhq2vidhq2v.png"
@@ -715,13 +722,26 @@ function Navbar({ activePage, onNavigate }) {
           <span>Projeto Zro</span>
         </a>
 
-        <div className="menu">
+        <button
+          className="menu-toggle"
+          type="button"
+          aria-label={isMenuOpen ? 'Fechar menu' : 'Abrir menu'}
+          aria-expanded={isMenuOpen}
+          aria-controls="main-menu"
+          onClick={() => setIsMenuOpen((current) => !current)}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+
+        <div className={isMenuOpen ? 'menu open' : 'menu'} id="main-menu">
           {navItems.map((item) => (
             <a
               className={activePage === item.id ? 'nav-link active' : 'nav-link'}
               key={item.id}
               href={`#${item.id}`}
-              onClick={() => onNavigate(item.id)}
+              onClick={() => handleNavigation(item.id)}
             >
               {item.label}
             </a>
@@ -729,7 +749,7 @@ function Navbar({ activePage, onNavigate }) {
           <a
             className="join-button"
             href="#participar"
-            onClick={() => onNavigate('participar')}
+            onClick={() => handleNavigation('participar')}
           >
             Quero Participar
           </a>
@@ -766,50 +786,58 @@ function HomePage({ showCards, activeCard, onToggleCards, onToggleCard }) {
           <p>
             A proposta combina educacao ambiental, organizacao de materiais <br></br>e participacao social em uma experiencia simples de acompanhar.
           </p>
-          <button className="primary-button" type="button" onClick={onToggleCards}>
+          <button
+            className="primary-button"
+            type="button"
+            aria-expanded={showCards}
+            aria-controls="home-more-content"
+            onClick={onToggleCards}
+          >
             {showCards ? 'Ver menos' : 'Ver mais'}
           </button>
         </div>
       </section>
 
-      <ImpactFlow />
-
       {showCards && (
-        <section className="work-section" id="produtos">
-          <div className="section-heading">
-            <p className="eyebrow">Atuacao</p>
-            <h2>O que nos fazemos?</h2>
-          </div>
+        <div id="home-more-content">
+          <ImpactFlow />
 
-          <div className="cards" aria-label="Areas de atuacao">
-            {cards.map((card, index) => {
-              const isActive = activeCard === index;
+          <section className="work-section" id="atuacao">
+            <div className="section-heading">
+              <p className="eyebrow">Atuacao</p>
+              <h2>O que nos fazemos?</h2>
+            </div>
 
-              return (
-                <button
-                  className={isActive ? 'card active' : 'card'}
-                  key={card.title}
-                  type="button"
-                  onClick={() => onToggleCard(index)}
-                  aria-pressed={isActive}
-                >
-                  {!isActive ? (
-                    <>
-                      <img src={card.image} alt="" />
-                      <h3>{card.title}</h3>
-                      <p>{card.summary}</p>
-                    </>
-                  ) : (
-                    <>
-                      <h3>{card.title}</h3>
-                      <p>{card.details}</p>
-                    </>
-                  )}
-                </button>
-              );
-            })}
-          </div>
-        </section>
+            <div className="cards" aria-label="Areas de atuacao">
+              {cards.map((card, index) => {
+                const isActive = activeCard === index;
+
+                return (
+                  <button
+                    className={isActive ? 'card active' : 'card'}
+                    key={card.title}
+                    type="button"
+                    onClick={() => onToggleCard(index)}
+                    aria-pressed={isActive}
+                  >
+                    {!isActive ? (
+                      <>
+                        <img src={card.image} alt="" />
+                        <h3>{card.title}</h3>
+                        <p>{card.summary}</p>
+                      </>
+                    ) : (
+                      <>
+                        <h3>{card.title}</h3>
+                        <p>{card.details}</p>
+                      </>
+                    )}
+                  </button>
+                );
+              })}
+            </div>
+          </section>
+        </div>
       )}
     </>
   );

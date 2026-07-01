@@ -6,12 +6,12 @@
     "products": [
       {
         "id": "mesa-eco-retangular",
-        "name": "Mesa Eco Retangular",
+        "name": "Mesa",
         "images": [
           "/assets/img/Gemini_Generated_Imag.png",
           "/assets/img/image2.png"
         ],
-        "price": "R$ 450,00",
+        "price": "XX$",
         "description": "Modelo retangular para refeitorios, pracas e espacos coletivos. Estrutura resistente e superficie facil de limpar.",
         "specs": [
           "Medidas (comprimento x largura x altura): a definir",
@@ -25,12 +25,12 @@
       },
       {
         "id": "mesa-redonda-comunitaria",
-        "name": "Mesa Redonda Comunitaria",
+        "name": "Mesa",
         "images": [
           "/assets/img/Gemini_Generated_Imag.png",
           "/assets/img/image2.png"
         ],
-        "price": "R$ 360,00",
+        "price": "XX$",
         "description": "Opcao compacta para convivencia, reunioes e areas de descanso. Indicada para ambientes com circulacao constante.",
         "specs": [
           "Medidas (diametro x altura): a definir",
@@ -44,12 +44,12 @@
       },
       {
         "id": "mesa-modular",
-        "name": "Mesa Modular",
+        "name": "Mesa",
         "images": [
           "/assets/img/Gemini_Generated_Imag.png",
           "/assets/img/Gemini_Generated_Image_hq2vidhq2vidhq2v.png"
         ],
-        "price": "R$ 510,00",
+        "price": "XX$",
         "description": "Formato versatil para compor layouts maiores ou menores conforme o espaco disponivel.",
         "specs": [
           "Medidas de cada modulo (comprimento x largura x altura): a definir",
@@ -70,12 +70,12 @@
     "products": [
       {
         "id": "cadeira-eco-basic",
-        "name": "Cadeira Eco Basic",
+        "name": "Cadeira",
         "images": [
           "/assets/img/Gemini_Generated_Imag.png",
           "/assets/img/image2.png"
         ],
-        "price": "R$ 145,00",
+        "price": "XX$",
         "description": "Cadeira leve para salas, eventos e ambientes compartilhados. Design simples e resistente.",
         "specs": [
           "Medidas (largura x profundidade x altura): a definir",
@@ -89,12 +89,12 @@
       },
       {
         "id": "cadeira-com-encosto-alto",
-        "name": "Cadeira com Encosto Alto",
+        "name": "Cadeira",
         "images": [
           "/assets/img/Gemini_Generated_Imag.png",
           "/assets/img/image2.png"
         ],
-        "price": "R$ 190,00",
+        "price": "XX$",
         "description": "Modelo com mais apoio para uso prolongado em recepcoes, escolas e espacos de atendimento.",
         "specs": [
           "Medidas (largura x profundidade x altura): a definir",
@@ -108,12 +108,12 @@
       },
       {
         "id": "banco-individual",
-        "name": "Banco Individual",
+        "name": "Cadeira",
         "images": [
           "/assets/img/Gemini_Generated_Imag.png",
           "/assets/img/Gemini_Generated_Image_hq2vidhq2vidhq2v.png"
         ],
-        "price": "R$ 120,00",
+        "price": "XX$",
         "description": "Alternativa compacta para areas externas, corredores e pontos de espera.",
         "specs": [
           "Medidas (largura x profundidade x altura): a definir",
@@ -134,12 +134,12 @@
     "products": [
       {
         "id": "lixeira-seletiva-dupla",
-        "name": "Lixeira Seletiva Dupla",
+        "name": "Lixeira",
         "images": [
           "/assets/img/Gemini_Generated_Imag.png",
           "/assets/img/image2.png"
         ],
-        "price": "R$ 260,00",
+        "price": "XX$",
         "description": "Conjunto para separacao basica de residuos reciclaveis e rejeitos em locais de grande fluxo.",
         "specs": [
           "Medidas totais (largura x profundidade x altura): a definir",
@@ -153,12 +153,12 @@
       },
       {
         "id": "lixeira-coletiva-4-cestos",
-        "name": "Lixeira Coletiva 4 Cestos",
+        "name": "Lixeira",
         "images": [
           "/assets/img/Gemini_Generated_Imag.png",
           "/assets/img/image2.png"
         ],
-        "price": "R$ 480,00",
+        "price": "XX$",
         "description": "Solucao completa para vidro, papel, plastico e metal, com identificacao visual clara.",
         "specs": [
           "Medidas totais (largura x profundidade x altura): a definir",
@@ -172,12 +172,12 @@
       },
       {
         "id": "lixeira-externa",
-        "name": "Lixeira Externa",
+        "name": "Lixeira",
         "images": [
           "/assets/img/Gemini_Generated_Imag.png",
           "/assets/img/image2.png"
         ],
-        "price": "R$ 310,00",
+        "price": "XX$",
         "description": "Modelo reforcado para pracas, patios e calcadas, preparado para uso continuo ao ar livre.",
         "specs": [
           "Medidas (largura x profundidade x altura): a definir",
